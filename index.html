@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaShop | Your One Stop Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDBKJG0EPZ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T7MK7EDERE');
+        </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Mega<span>Shop</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Upgrade Your Style</h1>
+            <p>Discover the latest trends in fashion and electronics with exclusive discounts. Quality products delivered at your doorstep.</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Features Section (To make it look full) -->
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Free Shipping</h3>
+            <p>On all orders above ₹999</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-undo"></i>
+            <h3>Easy Returns</h3>
+            <p>30-day money back guarantee</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Dedicated customer service</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Our Best Sellers</h2>
+        <div class="product-grid" id="product-list">
+            <!-- Products will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About MegaShop</h2>
+            <p>We started in 2024 with one goal: to provide high-quality lifestyle products at affordable prices. Our team works tirelessly to source the best materials and latest designs. With over 10,000+ happy customers, we are growing every day.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="total-price">0</span></h3>
+                <button class="btn checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MegaShop - Designed for Success</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
